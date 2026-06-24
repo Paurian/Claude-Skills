@@ -32,7 +32,7 @@ Ask about, at minimum:
 - **Scope boundaries**: Where does the guide start and stop?
 - **Branching**: Any "if X, do this; if Y, do that" forks? Capture both, or pick the
   common path and note the other.
-- **Branding**: Neutral (default) or branded? (T-Mobile theme is available.)
+- **Branding**: Neutral (default) or branded? (If X theme is available.)
 - **Images**: Will they provide screenshots? (Intake flow below.)
 
 Prefer tappable single-select questions when the answer is one of a few options.
