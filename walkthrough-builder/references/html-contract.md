@@ -30,7 +30,7 @@ my-walkthrough.html
 artifacts/
   base.css            <- structure + components (always)
   theme-neutral.css   <- neutral palette  (link exactly ONE of these two)
-  theme-tmobile.css   <- T-Mobile palette
+  theme-x.css         <- X palette
   app.js              <- behavior (always; copied verbatim)
   step-2-1.png ...    <- images (added after the maker uploads them)
   data.js             <- optional; only if the guide is data-driven (see section 9)
@@ -61,8 +61,8 @@ The storage prefix lives only in the HTML (on `<body data-store>`); `app.js` rea
 from there, which is why `app.js` never needs editing. Make the prefix unique per
 walkthrough so two guides open in the same browser never collide.
 
-To brand the page T-Mobile, change the theme link in `<head>` from
-`./artifacts/theme-neutral.css` to `./artifacts/theme-tmobile.css`.
+To brand the page X, change the theme link in `<head>` from
+`./artifacts/theme-neutral.css` to `./artifacts/theme-x.css`.
 
 ---
 
@@ -285,9 +285,9 @@ Structure lives in `base.css`; **palette and fonts live in a theme file**. The H
 links `base.css` plus exactly **one** theme:
 
 - `theme-neutral.css` — neutral/professional palette (default).
-- `theme-tmobile.css` — T-Mobile Un-carrier palette (Magenta `#E20074`, Berry
+- `theme-x.css` — X palette (Magenta `#E20074`, Berry
   `#861B54`, TeleNeo font, italics disabled). When a maker wants it, switch the
-  `<link>` href and consult the T-Mobile brand guidelines skill.
+  `<link>` href and consult the X brand guidelines skill if it is installed.
 
 Each theme file defines both light and dark variable sets. The page defaults to the
 reader's system setting and remembers a manual toggle choice. To create a new brand,
