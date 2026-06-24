@@ -1,0 +1,55 @@
+/* ════════════════════════════════════════════════════════════════════════
+   theme-x.css — X palette (light + dark)
+   Link this OR theme-neutral.css (never both), AFTER base.css.
+   Brand: Magenta #E20074, Berry #861B54, Black #000, Dark Gray #6A6A6A.
+   TeleNeo is the brand font; it falls back gracefully if not installed.
+   Per brand guidelines, italics are disabled. Consult the X brand
+   guidelines skill when producing branded output (if skill is available).
+   ════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --accent:   #E20074;   /* Magenta */
+  --accent-2: #861B54;   /* Berry */
+  --mono: 'TeleNeo Mono', 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  --sans: 'TeleNeo', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* No italics anywhere (brand rule) */
+i, em, .italic { font-style: normal; }
+
+/* LIGHT (default + explicit) */
+:root, [data-theme="light"] {
+  --bg:#f7f7f8; --card:#ffffff; --card-2:#f1eef0; --border:#e3dfe2;
+  --text:#1a1a1a; --text-dim:#6a6a6a; --text-bright:#000000;
+  --code-bg:#f5f2f4; --input-bg:#ffffff;
+  --green:#1a9d52; --amber:#b4690e; --red:#cc1f4a; --blue:#1769d6;
+  --accent-soft:rgba(226,0,116,0.10); --accent-line:rgba(226,0,116,0.30);
+  --shadow:0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.05);
+}
+
+/* DARK (system preference, before any manual choice) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:#0c0a0b; --card:#171416; --card-2:#211c1f; --border:#332b30;
+    --text:#efe9ec; --text-dim:#a89aa1; --text-bright:#ffffff;
+    --code-bg:#120f11; --input-bg:#1c181a;
+    --green:#3ddc84; --amber:#ffb74d; --red:#ff6b8a; --blue:#5aa2ff;
+    --accent-soft:rgba(226,0,116,0.18); --accent-line:rgba(226,0,116,0.42);
+    --shadow:0 1px 3px rgba(0,0,0,0.45), 0 8px 28px rgba(0,0,0,0.4);
+  }
+}
+
+/* DARK (explicit manual override) */
+[data-theme="dark"] {
+  --bg:#0c0a0b; --card:#171416; --card-2:#211c1f; --border:#332b30;
+  --text:#efe9ec; --text-dim:#a89aa1; --text-bright:#ffffff;
+  --code-bg:#120f11; --input-bg:#1c181a;
+  --green:#3ddc84; --amber:#ffb74d; --red:#ff6b8a; --blue:#5aa2ff;
+  --accent-soft:rgba(226,0,116,0.18); --accent-line:rgba(226,0,116,0.42);
+  --shadow:0 1px 3px rgba(0,0,0,0.45), 0 8px 28px rgba(0,0,0,0.4);
+}
+
+/* Make native controls (date picker, scrollbars) match the active theme */
+:root, [data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { color-scheme: dark; } }
+[data-theme="dark"] { color-scheme: dark; }
