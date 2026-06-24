@@ -102,8 +102,8 @@ Two features carry the value; make sure both show up whenever they apply:
   no local `fetch()`, no cross-origin fonts/CDNs — so it works both double-clicked
   (`file://`) and hosted. Copy `base.css` and `app.js` verbatim from the skill's assets.
 - **Two palette files, neutral by default.** `theme-neutral.css` (default) and
-  `theme-tmobile.css` are the brand split; the HTML links exactly one. To go branded,
-  switch the theme `<link>` and consult the T-Mobile brand guidelines skill.
+  `theme-x.css` are the brand split; the HTML links exactly one. To go branded,
+  switch the theme `<link>` and consult the X brand guidelines skill (if installed).
 - **Themeable light/dark**, defaulting to the reader's system setting.
 - **Images** live in `./artifacts/`, display at content width when wider / centered
   when narrower, and click to open the untouched original in a new tab.
